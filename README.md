@@ -28,6 +28,6 @@
 <p>Para outras dúvidas consultar as <a href="https://saftparaexcel.pt/f-a-q/">FAQs</a></p>
 <p>Funcionalidades em desenvolvimento</p>
 <ul>
-	<li>Gerar um ficheiro Excel/XLSX apartir de <italic>n</italic> ficheiro do e-factura. </li>
+	<li>Gerar um ficheiro Excel/XLSX apartir de <italic>n</italic> ficheiros CVS do e-factura. </li>
 	<li>Converter para Excel/XLSX SAF-t de contabilidade. </li>
 <p>&nbsp;</p>
