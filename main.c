@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <saft.h>
 #include <excel.h>
-
+#include <e_factura.h>
 
 void main()
 {
-	void saft_File_read() ;
+	void saft_file_read() ;
 }
