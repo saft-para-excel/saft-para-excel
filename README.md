@@ -12,7 +12,7 @@
 </li>
 </ul>
 
-<h1>O Site <a href="https://saftparaexcel.pt/">SAF-t para Excel pode ser acedido aqui</a></h1>
+<h1>O site <a href="https://saftparaexcel.pt/">SAF-t para Excel pode ser acedido aqui</a></h1>
 
 <ul>
 <li>
@@ -26,4 +26,8 @@
 </li>
 </ul>
 <p>Para outras dúvidas consultar as <a href="https://saftparaexcel.pt/f-a-q/">FAQs</a></p>
+<p>Funcionalidades em desenvolvimento</p>
+<ul>
+	<li>Gerar um ficheiro Excel/XLSX apartir de <italic>n</italic> ficheiro do e-factura. </li>
+	<li>Converter para Excel/XLSX SAF-t de contabilidade. </li>
 <p>&nbsp;</p>
