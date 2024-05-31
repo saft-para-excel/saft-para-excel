@@ -22,6 +22,7 @@
 <li>O botão Enviar Ficheiro <a href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/SAFT_PT/Paginas/news-saf-t-pt.aspx" target="_blank" rel="noopener">SAF-t</a> carrega o ficheiro no nosso sistema</li>
 <li>O ficheiro é convertido para <a href="https://www.microsoft.com/en-us/microsoft-365/excel" target="_blank" rel="noopener">Excel</a></li>
 <li>Depois de convertido é enviado automáticamente para o mail mencionado anteriormente.</li>
+
 </ul>
 </li>
 </ul>
@@ -30,4 +31,5 @@
 <ul>
 	<li>Gerar um ficheiro Excel/XLSX apartir de <italic>n</italic> ficheiros CVS do e-factura. </li>
 	<li>Converter para Excel/XLSX SAF-t de contabilidade. </li>
+		<li>Converter o ficheiro SAF-t de Angola </li>
 <p>&nbsp;</p>
