@@ -15,8 +15,6 @@
 <h1>O site <a href="https://saftparaexcel.pt/">SAF-t para Excel pode ser acedido aqui</a></h1>
 
 <ul>
-<li>
-<ul>
 <li>Introduzir um e-mail</li>
 <li>Premir o botão “Browse” para indicar nome de um ficheiro <a href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/SAFT_PT/Paginas/news-saf-t-pt.aspx" target="_blank" rel="noopener">SAF-t</a></li>
 <li>O botão Enviar Ficheiro <a href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/SAFT_PT/Paginas/news-saf-t-pt.aspx" target="_blank" rel="noopener">SAF-t</a> carrega o ficheiro no nosso sistema</li>
@@ -24,7 +22,7 @@
 <li>Depois de convertido é enviado automáticamente para o mail mencionado anteriormente.</li>
 
 </ul>
-</li>
+
 </ul>
 <p>Para outras dúvidas consultar as <a href="https://saftparaexcel.pt/f-a-q/">FAQs</a></p>
 <p>Funcionalidades em desenvolvimento</p>
