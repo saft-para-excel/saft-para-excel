@@ -1,3 +1,4 @@
+<h1>Conversor de Ficheiros SAF-t para Excel </h1>
 <h2>Conversor online de ficheiros <a href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/SAFT_PT/Paginas/news-saf-t-pt.aspx" target="_blank" rel="noopener">SAF-t</a> para <a href="https://www.microsoft.com/en-us/microsoft-365/excel" target="_blank" rel="noopener">Excel</a> (xlsx) com várias folhas de cálculo, não gera um <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank" rel="noopener">CVS</a>, mas um <a href="https://www.microsoft.com/en-us/microsoft-365/excel" target="_blank" rel="noopener">Excel</a> nativo com as formatações de celulas, casas décimais, a primeira linha fixa, etç, que posteriormente pode ser lido pelos seguintes programas e respectivas versões para telemovel/tablet:</h2>
 
 <ul>
@@ -28,6 +29,7 @@
 	<li>Gerar um ficheiro Excel/XLSX apartir de <italic>n</italic> ficheiros CVS do e-factura. </li>
 	<li>Converter para Excel/XLSX SAF-t de contabilidade. </li>
 		<li>Converter o ficheiro SAF-t de Angola </li>
+</ul>
 <p>&nbsp;</p>
 
 <h2> A Quem se Destina? </h2>
