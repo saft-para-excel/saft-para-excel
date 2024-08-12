@@ -29,3 +29,7 @@
 	<li>Converter para Excel/XLSX SAF-t de contabilidade. </li>
 		<li>Converter o ficheiro SAF-t de Angola </li>
 <p>&nbsp;</p>
+
+<h2> A Quem se Destina? </h2>
+<p> Utilizadores que tenham programas sejam <a href="https://www.oracle.com/pt/erp/what-is-erp/" target="_blank" rel="noopener">ERP</a> sejam <a href="https://duckduckgo.com/?t=ffab&amp;q=POS&amp;ia=web" target="_blank" rel="noopener">POS</a> com motores de relatórios limitados e pretendam analisar a sua actividade de uma maneira mais profunda, para essa analise o <a href="https://www.microsoft.com/pt-pt/microsoft-365/excel?market=pt" target="_blank" rel="noopener">Excel</a> e outras <a href="https://en.wikipedia.org/wiki/Spreadsheet" target="_blank" rel="noopener">folhas de cálculo</a> são as ferramentas ideal, pois são de muito fácil utilização não sendo necessário o utilizador 
+</p>
