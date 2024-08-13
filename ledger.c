@@ -131,4 +131,30 @@ int saft_c_to_database(char* file_name) {
     }
     return 1;
 }
+void process_column_data(ColumnData *colum_data, int *cnt, Sheet *sheet, Font title_font, Alignment center_align, Fill title_background, GL gl) {
+    for (int i = 0; i < colum_data->size; i++) {
+        ColumnData cc = colum_data->data[i];
+        char *col = gl.column_ref[*cnt];
+        set_font(sheet, cell(), title_font);
+        set_alignment(sheet, cell(), center_align);
+        set_fill(sheet, cell(), title_background);
+        set_value(sheet, cell(), cc);
+        (*cnt)++;
+        printf("%s,\n", cc);
+    }
+    sheet->freeze_panes = "A2";  // primeira linha+1 fixa
+    const char *sql = "SELECT * FROM transactions ORDER BY transaction_id";
+    Journals *journals = sqlite_crud_query_many(sql);
+    line++;
+    for (int j = 0; j < journals->size; j++) {  // lines_detail:
+        int cnt = 0;
+        for (int n = 0; n < journals->data[j].size; n++) {
+            char *col = gl.column_ref[cnt];
+            set_value(sheet, cell(), journals->data[j].data[n]);
+            cnt++;
+        }
+        line++;
+    }
+}
+
 
