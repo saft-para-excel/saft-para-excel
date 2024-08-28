@@ -31,12 +31,14 @@
 		<li>Converter o ficheiro SAF-t de Angola </li>
 </ul>
 <p>&nbsp;</p>
-
-<h2>A quem se destina o conversor de SAF-t para Excel?</h2>
 O presente site destina-se a:
 <ul>
-	Utilizadores que tenham programas sejam ERP sejam POS com motores de relatórios limitados e pretendam analisar a sua actividade de uma maneira mais profunda, para essa analise o Excel e outras folhas de cálculo são as ferramentas ideal, pois são de muito fácil utilização não sendo necessário o utilizador ter conhecimentos de SQL ou de outras linguagens de manipulação de dados.
-Utilizadores que apesar de terem programas com motores de relatórios avançados como o Crystal Reports, Report Builder, Fast Report, List and Label, etc., encontram no Excel e noutras folhas de cálculo uma facilidade de interagirem com os dados muito mais versátil do que com os motores de relatórios  convencionais.
-Utilizadores que mudem de software de facturação e pretendem ficar com o histórico de vendas, artigos, contas correntes, documentos de trabalho, etc.
-Quando há a necessidade de importar artigos, clientes, fornecedores para outra plataforma de facturação, e que -como quse todas- suporte importação a partir de ficheiros CVS ou XLS/XLSX ( Excel)
+	<li style="list-style-type: none;">
+<ul>
+	<li>Utilizadores que tenham programas sejam <a href="https://www.oracle.com/pt/erp/what-is-erp/" target="_blank" rel="noopener">ERP</a> sejam <a href="https://duckduckgo.com/?t=ffab&amp;q=POS&amp;ia=web" target="_blank" rel="noopener">POS</a> com motores de relatórios limitados e pretendam analisar a sua actividade de uma maneira mais profunda, para essa analise o <a href="https://www.microsoft.com/pt-pt/microsoft-365/excel?market=pt" target="_blank" rel="noopener">Excel</a> e outras <a href="https://en.wikipedia.org/wiki/Spreadsheet" target="_blank" rel="noopener">folhas de cálculo</a> são as ferramentas ideal, pois são de muito fácil utilização não sendo necessário o utilizador ter conhecimentos de <a href="https://en.wikipedia.org/wiki/SQL" target="_blank" rel="noopener">SQL</a> ou de outras linguagens de manipulação de dados.</li>
+	<li>Utilizadores que apesar de terem programas com motores de relatórios avançados como o <a href="https://www.sap.com/products/technology-platform/crystal-reports.html" target="_blank" rel="noopener">Crystal Reports</a>, <a href="https://www.digital-metaphors.com/products/editions/#Standard" target="_blank" rel="noopener">Report Builder</a>, <a href="https://www.fast-report.com/" target="_blank" rel="noopener">Fast Report</a>, <a href="https://www.combit.com/reportingtool/" target="_blank" rel="noopener">List and Label</a>, etc., encontram no <a href="https://www.microsoft.com/pt-pt/microsoft-365/excel?market=pt" target="_blank" rel="noopener">Excel</a> e noutras <a href="https://en.wikipedia.org/wiki/Spreadsheet" target="_blank" rel="noopener">folhas de cálculo</a> uma facilidade de interagirem com os dados muito mais versátil do que com os motores de relatórios  convencionais.</li>
+	<li>Utilizadores que mudem de software de facturação e pretendem ficar com o histórico de vendas, artigos, contas correntes, documentos de trabalho, etc.</li>
+	<li>Quando há a necessidade de importar artigos, clientes, fornecedores para outra plataforma de facturação, e que -como quse todas- suporte importação a partir de ficheiros CVS ou XLS/XLSX ( Excel)</li>
+</ul>
+</li>
 </ul>
