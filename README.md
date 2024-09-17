@@ -11,7 +11,7 @@
 </ul>
 
 
-<h1>O site <a href="https://saftparaexcel.pt/">SAF-t para Excel pode ser acedido aqui</a></h1>
+<h1>O site saftparaexcel.com <a href="https://saftparaexcel.com/">SAF-t para Excel pode ser acedido aqui</a></h1>
 
 <ul>
 <li>Introduzir um e-mail</li>
@@ -37,4 +37,11 @@ O presente site destina-se a:
 	<li>Utilizadores que apesar de terem programas com motores de relatórios avançados como o <a href="https://www.sap.com/products/technology-platform/crystal-reports.html" target="_blank" rel="noopener">Crystal Reports</a>, <a href="https://www.digital-metaphors.com/products/editions/#Standard" target="_blank" rel="noopener">Report Builder</a>, <a href="https://www.fast-report.com/" target="_blank" rel="noopener">Fast Report</a>, <a href="https://www.combit.com/reportingtool/" target="_blank" rel="noopener">List and Label</a>, etc., encontram no <a href="https://www.microsoft.com/pt-pt/microsoft-365/excel?market=pt" target="_blank" rel="noopener">Excel</a> e noutras <a href="https://en.wikipedia.org/wiki/Spreadsheet" target="_blank" rel="noopener">folhas de cálculo</a> uma facilidade de interagirem com os dados muito mais versátil do que com os motores de relatórios  convencionais.</li>
 	<li>Utilizadores que mudem de software de facturação e pretendem ficar com o histórico de vendas, artigos, contas correntes, documentos de trabalho, etc.</li>
 	<li>Quando há a necessidade de importar artigos, clientes, fornecedores para outra plataforma de facturação, e que -como quse todas- suporte importação a partir de ficheiros CVS ou XLS/XLSX ( Excel)</li>
+</ul>
+<h2></h2>O Excel gerado a partir do SAF-t de vendas pode ser utilizado com forma de arquivo</h2>
+
+<ul>
+<li>No caso de falha do sistema com perca de dados.</li>
+<li>Migração para outra plataforma em que os dados do programa anterior não podem ser consultados por muitas razões.</li>
+<li>Para futura analise sem necessitar de utilizar o programa de facturação.</li>
 </ul>
