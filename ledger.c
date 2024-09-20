@@ -156,5 +156,42 @@ void process_column_data(ColumnData *colum_data, int *cnt, Sheet *sheet, Font ti
         line++;
     }
 }
+#include <stdio.h>
+#include <string.h>
+#include <sqlite3.h>
+
+void insert_journals(int file_pointers[2], char *SAFT_FILE_DATA[], sqlite3 *db) {
+    int pointer_line = file_pointers[0];
+    while (pointer_line <= file_pointers[1]) {
+        char *n = SAFT_FILE_DATA[pointer_line];
+        int flag = 0;
+        if (strstr(n, "<Journal>") != NULL) {
+            int journal_start = pointer_line;
+            pointer_line += 1;
+            char *journal_id = tag_to_string(SAFT_FILE_DATA[pointer_line]);
+            pointer_line += 1;
+            char *desc = tag_to_string(SAFT_FILE_DATA[pointer_line]);
+            const char *sql = "INSERT INTO journals (journal_id, description) VALUES (?, ?)";
+            printf("DEBUG %s\n", __FILE__);
+            printf("journal_id, description, journal_hash\n");
+            printf("%s, %s\n", journal_id, desc);
+            printf("END DEBUG\n");
+
+            sqlite3_stmt *stmt;
+            sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
+            sqlite3_bind_text(stmt, 1, journal_id, -1, SQLITE_STATIC);
+            sqlite3_bind_text(stmt, 2, desc, -1, SQLITE_STATIC);
+            sqlite3_step(stmt);
+            sqlite3_finalize(stmt);
+        }
+        if (strstr(n, "</Journal>") != NULL) {
+            int journal_end = pointer_line;
+            transaction_insert(journal_start, journal_end, journal_id);
+        }
+        pointer_line += 1;
+    }
+}
+
+
 
 
