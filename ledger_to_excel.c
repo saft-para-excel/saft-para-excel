@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 void create_excel() {
     // Function to create a cell in Excel format
@@ -92,4 +93,34 @@ int main() {
     create_excel();
     return 0;
 }
+
+
+void colorize_lines() {
+    char cell_stack[256] = "";
+    bool cell_flag = true;
+    // Assuming PatternFill and other related structures are defined elsewhere
+    PatternFill even = {wb_color, wb_color, "solid"};
+    PatternFill odd = {"ffffff", "ffffff", "solid"};
+    
+    for (int row = 2; row < line; row++) {
+        // Assuming get_row_value is a function that retrieves the value from the specified cell
+        char* a = get_row_value(sheet, row, 2);
+        
+        if (strcmp(cell_stack, a) == 0) {
+            // Do nothing
+        } else {
+            cell_flag = !cell_flag;
+            strcpy(cell_stack, a);
+        }
+        
+        PatternFill fill_pattern = cell_flag ? even : odd;
+        
+        for (int col = 1; col <= sheet.max_column; col++) {
+            // Assuming set_cell_fill and set_cell_border are functions that set the fill and border of the cell
+            set_cell_fill(sheet, row, col, fill_pattern);
+            set_cell_border(sheet, row, col, dotted_border);
+        }
+    }
+}
+
 
