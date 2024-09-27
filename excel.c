@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <saft.h>
 
 #define MAX_COLUMNS 23
 #define MAX_COLUMN_NAME_LENGTH 40
