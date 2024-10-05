@@ -2,6 +2,7 @@
 #include <saft.h>
 #include <excel.h>
 #include <e_factura.h>
+#include <saft_contabilidade.h>
 
 void main()
 {
