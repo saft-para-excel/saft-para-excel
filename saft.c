@@ -14,7 +14,6 @@ typedef struct {
 
 Dictionary* tag_to_dict(char* n) {
     // Implement the tag_to_dict function to convert a string to a dictionary
-    // This function is not provided in the input code
     return NULL;
 }
 
@@ -30,7 +29,6 @@ void write_header_to_file(Dictionary* header_dict) {
 
 void log_insert_header() {
     // Implement the log_insert_header function to log the insertion of the header
-    // This function is not provided in the input code
 }
 
 int get_header(int* file_pointers) {
