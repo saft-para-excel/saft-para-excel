@@ -123,4 +123,46 @@ void colorize_lines() {
     }
 }
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int line = 0;
+const int MAX_LINES = 1048576;
+int SHEET_COUNT = -1;
+int SHEET_NEW = 1; // True
+
+// Function prototypes
+void create_row_headers();
+void create_sheet(const char* name);
+
+void process_journals(char** journals, int journal_count) {
+    // main loop
+    for (int i = 0; i < journal_count; i++) { // lines_detail
+        if (SHEET_NEW) {
+            if (SHEET_COUNT == -1) {
+                create_sheet("Diários");
+            } else {
+                char sheet_name[50];
+                snprintf(sheet_name, sizeof(sheet_name), "Diários %d", SHEET_COUNT);
+                create_sheet(sheet_name);
+                // Assuming gl.MESSAGES_TO_EXCEL is a string buffer
+                strcat(gl.MESSAGES_TO_EXCEL, "O numero de linhas excede o maximo suportado pelo Excel de 1 048 576, foi criada outra folha.\n");
+            }
+            SHEET_COUNT++;
+            create_row_headers();
+            SHEET_NEW = 0; // False
+        }
+    }
+}
+
+// Dummy implementations for the functions
+void create_row_headers() {
+    // Implementation for creating row headers
+}
+
+void create_sheet(const char* name) {
+    // Implementation for creating a sheet
+}
+
 
