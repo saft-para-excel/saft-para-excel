@@ -1,49 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include <dirent.h>
 #include <sys/stat.h>
-#include <unistd.h>
 
-#define SPOOL_DIR "path_to_spool_dir/"
-#define SAFT_PATH "path_to_saft_path/"
+#define SPOOL_DIR "path_to_spool_dir" 
+#define SAFT_PATH "path_to_saft_path" 
 #define LOCK_DIR "LOCK"
+#define JSON_FILE "data.json"
 
-void main(); // Forward declaration of main function
+void main(); 
 
-void spool_reader() {
-    struct dirent *entry;
-    DIR *dp = opendir(SPOOL_DIR);
+void spool_reader(char *command[]) {
+    int wait_seconds;
+    if (command[1] != NULL) {
+        wait_seconds = atoi(command[1]);
+    } else {
+        wait_seconds = 10;
+    }
+    printf("seconds: %d\n", wait_seconds);
     
-    if (dp == NULL) {
-        perror("opendir");
-        return;
-    }
+    struct stat buffer;
+    int stop_command = (stat(SPOOL_DIR "/stop", &buffer) == 0);
 
-    while ((entry = readdir(dp)) != NULL) {
-        if (entry->d_type == DT_DIR) {
-            if (strcmp(entry->d_name, LOCK_DIR) == 0) {
-                printf("LOCK found\n");
-            } else {
-                printf("%s%s -> %s%s\n", SPOOL_DIR, entry->d_name, SAFT_PATH, entry->d_name);
-                
-                char source[256];
-                char destination[256];
-                snprintf(source, sizeof(source), "%s%s", SPOOL_DIR, entry->d_name);
-                snprintf(destination, sizeof(destination), "%s%s", SAFT_PATH, entry->d_name);
-                
-                rename(source, destination); // Move the directory
-                
-                // Assuming gl.WORKING_DIR and gl.JSON_FILE are global variables
-                extern char *WORKING_DIR;
-                extern char JSON_FILE[256];
-                WORKING_DIR = entry->d_name;
-                snprintf(JSON_FILE, sizeof(JSON_FILE), "%s%s/data.json", SAFT_PATH, WORKING_DIR);
-                
-                main(); // Call main function
+    while (!stop_command) {
+        DIR *d;
+        struct dirent *dir;
+        d = opendir(SPOOL_DIR);
+        if (d) {
+            while ((dir = readdir(d)) != NULL) {
+                if (strcmp(dir->d_name, ".") != 0 && strcmp(dir->d_name, "..") != 0) {
+                    if (strcmp(dir->d_name, LOCK_DIR) == 0) {
+                        printf("LOCK found\n");
+                    } else {
+                        printf("COPY: %s/%s\n", SPOOL_DIR, dir->d_name);
+                        char source[256];
+                        char destination[256];
+                        snprintf(source, sizeof(source), "%s/%s", SPOOL_DIR, dir->d_name);
+                        snprintf(destination, sizeof(destination), "%s/%s", SAFT_PATH, dir->d_name);
+                        rename(source, destination); // Move file
+                        main();
+                    }
+                }
             }
+            closedir(d);
         }
+        sleep(wait_seconds);
+        stop_command = (stat(SPOOL_DIR "/stop", &buffer) == 0);
     }
-    closedir(dp);
+    printf("STOP by command\n");
 }
 
