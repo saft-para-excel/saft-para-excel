@@ -11,10 +11,10 @@
 </ul>
 
 
-<h1>O site saftparaexcel.com <a href="https://saftparaexcel.com/">SAF-t vendas para Excel pode ser acedido aqui</a></h1>
-<h1>O site saftparaexcel.com <a href="https://saftparaexcel.pt/">SAF-t vendas para Excel pode ser acedido aqui</a></h1>
-<h1>O site saftcontabilidade.com <a href="https://saftcontabilidade.com/">SAF-t de contabilidade para Excel pode ser acedido aqui</a></h1>
-<h1>O site saftcontabilidade.pt <a href="https://saftcontabilidade.pt/">SAF-t de contbilidade para Excel pode ser acedido aqui</a></h1>
+<h2>O site saftparaexcel.com <a href="https://saftparaexcel.com/">SAF-t vendas para Excel pode ser acedido aqui</a></h2>
+<h2>O site saftparaexcel.com <a href="https://saftparaexcel.pt/">SAF-t vendas para Excel pode ser acedido aqui</a></h2>
+<h2>O site saftcontabilidade.com <a href="https://saftcontabilidade.com/">SAF-t de contabilidade para Excel pode ser acedido aqui</a></h2>
+<h2>O site saftcontabilidade.pt <a href="https://saftcontabilidade.pt/">SAF-t de contbilidade para Excel pode ser acedido aqui</a></h2>
 <ul>
 <li>Introduzir um e-mail</li>
 <li>Premir o botão “Browse” para indicar nome de um ficheiro <a href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/SAFT_PT/Paginas/news-saf-t-pt.aspx" target="_blank" rel="noopener">SAF-t</a></li>
