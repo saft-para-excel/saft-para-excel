@@ -1,3 +1,4 @@
+-- base de dados Postgresql
 create table programas
 (
     name            varchar(255) not null,
