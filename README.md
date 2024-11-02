@@ -48,6 +48,6 @@ O presente site destina-se a:
 <li>Para futura analise sem necessitar de utilizar o programa de facturação.</li>
 </ul>
 <h1>Agora com conversor SAF-t da contabilidade para Excel</h1>
-<ul><li>cContas</li>
+<ul><li>Contas</li>
 <li>Diários</li>
 <li>Diarios + Transações + Lançamentos</li></ul>
