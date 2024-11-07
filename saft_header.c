@@ -3,6 +3,8 @@
 #include <string.h>
 
 #define MAX_HEADER_DICT_SIZE 100
+#define MAX_HEADER_SIZE 256
+
 
 typedef struct {
     char file_hash[64];
