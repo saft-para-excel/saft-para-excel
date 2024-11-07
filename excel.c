@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <saft.h>
+#include <excel.h>
 
 #define MAX_COLUMNS 23
 #define MAX_COLUMN_NAME_LENGTH 40
