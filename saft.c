@@ -71,4 +71,21 @@ int get_header(int* file_pointers) {
 
     return 1;
 }
+struct GlobalDict {
+    char tax_registration_number[50];
+    char company_name[100];
+    char start_date[20];
+    char end_date[20];
+};
 
+struct GlobalDict gl;
+
+char* saft_subject() {
+    static char a[300];
+    snprintf(a, sizeof(a), "Excel do SAF-t de NIF:%s %s (%s a %s)", 
+             gl.tax_registration_number, 
+             gl.company_name, 
+             gl.start_date, 
+             gl.end_date);
+    return a;
+}
