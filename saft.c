@@ -1,6 +1,17 @@
+
 #include <stdio.h>
-#include <stdlib.h>
+#include <time.h>
 #include <string.h>
+#include <stdbool.h>
+#include "setup_files.h"
+#include "sql_oracle.h"
+#include "saft.h"
+#include "log_crud.h"
+#include "update_db.h"
+#include "excel.h"
+#include "smtpmail.h"
+#include "global.h"
+#include "stdio_utils.h"
 
 typedef struct {
     char* key;
@@ -13,23 +24,9 @@ typedef struct {
 } Dictionary;
 
 Dictionary* tag_to_dict(char* n) {
-    // Implement the tag_to_dict function to convert a string to a dictionary
     return NULL;
 }
 
-void insert_header(Dictionary* header_dict) {
-    // Implement the insert_header function to insert the header dictionary into the database
-    // This function is not provided in the input code
-}
-
-void write_header_to_file(Dictionary* header_dict) {
-    // Implement the write_header_to_file function to write the header dictionary to a file
-    // This function is not provided in the input code
-}
-
-void log_insert_header() {
-    // Implement the log_insert_header function to log the insertion of the header
-}
 
 int get_header(int* file_pointers) {
     Dictionary* header_dict = malloc(sizeof(Dictionary));
@@ -89,3 +86,54 @@ char* saft_subject() {
              gl.end_date);
     return a;
 }
+
+
+void sales_documents_integration() {
+    printf("Integra documentos de venda existentes no ficheiro SAF_t na base de dados Oracle");
+    double total_execution_time = 0;
+    clock_t start_time = clock();
+    bool flag = true;
+    bool responce = saft_setup();
+
+    if (responce) {
+        init_database();
+        for (int i = 0; i < WORKING_FILES_COUNT; i++) {
+            const char *n = WORKING_FILES[i];
+            bool a = read_file(n);
+            if (a) {
+                bool ready = saft_to_database(n);
+                if (!ready) {
+                    printf("Error on integration from SAF-t to DBb #51\n");
+                    flag = false;
+                    break;
+                }
+            } else {
+                printf("Error on reading SAF-t file #71\n");
+                write_error("Error on reading SAF-t file #71");
+                flag = false;
+            }
+            printf("%14s\n", basename(n));
+        }
+        if (GLOBAL_DICT["products"] == 0) {
+            create_from_sales();
+        }
+        update_customers();
+        update_products();
+        if (flag) {
+            database_to_excel();
+            mail_gateway();
+        } else {
+            printf("\nError on reading HEADER SAF-t file #68\n");
+            write_error("Error on reading SAF-t file #57");
+        }
+    } else {
+        printf("Houve um erro\n");
+    }
+    clock_t end_time = clock();
+    total_execution_time += (double)(end_time - start_time) / CLOCKS_PER_SEC;
+    printf("%14s\n", format_seconds_to_hours(total_execution_time));
+    printf("%s\n", "----------------------------------------");
+    GLOBAL_DICT["total_time"] = seconds_to_hours(total_execution_time);
+    log_update(GLOBAL_DICT);
+}
+
