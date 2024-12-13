@@ -3,6 +3,15 @@
 #include <string.h>
 #include <stdbool.h>
 
+int line = 0;
+const int MAX_LINES = 1048576;
+int SHEET_COUNT = -1;
+int SHEET_NEW = 1; // True
+
+// Function prototypes
+void create_row_headers();
+void create_sheet(const char* name);
+
 void create_excel() {
     // Function to create a cell in Excel format
     char cell[3];
@@ -79,8 +88,6 @@ void create_excel() {
                       "LEFT OUTER JOIN accounts a ON a.account_id = transaction_lines.debit_account_id "
                       "LEFT OUTER JOIN accounts b ON b.account_id = transaction_lines.credit_account_id "
                       "ORDER BY accounts.account_description;";
-
-    // Simulate setting column widths and styles
     for (int i = 0; i < sizeof(colum_data) / sizeof(colum_data[0]); i++) {
         snprintf(cell, sizeof(cell), "%s%d", colum_data[i][0], line);
         // Here you would set the width, font, alignment, and fill for the cell
@@ -98,14 +105,12 @@ int main() {
 void colorize_lines() {
     char cell_stack[256] = "";
     bool cell_flag = true;
-    // Assuming PatternFill and other related structures are defined elsewhere
     PatternFill even = {wb_color, wb_color, "solid"};
     PatternFill odd = {"ffffff", "ffffff", "solid"};
     
     for (int row = 2; row < line; row++) {
         // Assuming get_row_value is a function that retrieves the value from the specified cell
         char* a = get_row_value(sheet, row, 2);
-        
         if (strcmp(cell_stack, a) == 0) {
             // Do nothing
         } else {
@@ -116,25 +121,13 @@ void colorize_lines() {
         PatternFill fill_pattern = cell_flag ? even : odd;
         
         for (int col = 1; col <= sheet.max_column; col++) {
-            // Assuming set_cell_fill and set_cell_border are functions that set the fill and border of the cell
             set_cell_fill(sheet, row, col, fill_pattern);
             set_cell_border(sheet, row, col, dotted_border);
         }
     }
 }
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-int line = 0;
-const int MAX_LINES = 1048576;
-int SHEET_COUNT = -1;
-int SHEET_NEW = 1; // True
-
-// Function prototypes
-void create_row_headers();
-void create_sheet(const char* name);
 
 void process_journals(char** journals, int journal_count) {
     // main loop
