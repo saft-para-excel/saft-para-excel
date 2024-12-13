@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <saft.h>
 
 typedef struct {
     char *name;
@@ -8,8 +9,6 @@ typedef struct {
 } ColumnData;
 
 void create_excel() {
-    // cria folha de artigos já com os saldos
-    // Função para criar a célula do excel, a partir da coluna da linha
     char* cell(int col, int line) {
         static char cell_ref[5];
         return cell_ref;
@@ -24,7 +23,6 @@ void create_excel() {
     const char* qtd_format = "# ##0.00;[RED]-# ##0.00";
     const char* center_align = "center, center";
     const char* dotted_border = "dotted";
-    // ------------------------
 
     int line = 1;
     int col = 0;  // 0=A
@@ -44,6 +42,6 @@ void create_excel() {
         printf("Setting fill of cell %s to %s\n", cell(col, line), title_background);
         printf("Setting value of cell %s to %s\n", cell(col, line), colum_data[col].name);
     }
-    printf("Freezing panes at A2\n");  // primeira linha+1 fixa
+    printf("Freezing panes at A2\n"); 
 }
 
