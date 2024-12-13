@@ -49,6 +49,6 @@ void spool_reader(char *command[]) {
         sleep(wait_seconds);
         stop_command = (stat(SPOOL_DIR "/stop", &buffer) == 0);
     }
-    printf("STOP by command\n");
+    printf("STOP by user command\n");
 }
 
