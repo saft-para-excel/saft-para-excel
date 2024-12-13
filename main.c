@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ledger.h>
 #include <saft.h>
 #include <excel.h>
 #include <e_factura.h>
