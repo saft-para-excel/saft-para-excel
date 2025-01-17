@@ -47,7 +47,10 @@ O presente site destina-se a:
 <li>Migração para outra plataforma em que os dados do programa anterior não podem ser consultados por muitas razões.</li>
 <li>Para futura analise sem necessitar de utilizar o programa de facturação.</li>
 </ul>
-<h1>Agora com conversor SAF-t da contabilidade para Excel</h1>
-<ul><li>Contas</li>
-<li>Diários</li>
-<li>Diarios + Transações + Lançamentos</li></ul>
+<h1>Conversor do XML do inventário para Excel</h1>
+<ul><li>Artigos</li>
+<li>Quantidade</li>
+<li>Valor</li></ul>
+
+
+
