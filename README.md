@@ -48,9 +48,20 @@ O presente site destina-se a:
 <li>Para futura analise sem necessitar de utilizar o programa de facturação.</li>
 </ul>
 <h1>Conversor do XML do inventário para Excel</h1>
-<ul><li>Artigos</li>
+Está a ser desenvolvido o conversor do XML do inventário gerado pelas aplicações de faturação para Excel, de notar que a entrega em formato eletrónico deste ficheiro - tambem em XML  como o SAF-t- é obrigatória até ao ultimo dia de Janeiro.
+
+O conversor  neste momemto em fase adiantade de desenvolvimento permite ao utilizador consultar, arquivar e analisar o inventário manifestado á AT.
+
+As colunas são as seguintes:
+<ul>
+	<li>Referencia</li>
+<li>Artigo</li>
+<li>Unidade</li>
 <li>Quantidade</li>
-<li>Valor</li></ul>
+<li>Valor</li>
+<li>Código Interno</li>
+<li>Tipo de Artigo</li>
+</ul>
 
 
 
