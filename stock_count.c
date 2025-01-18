@@ -58,3 +58,49 @@ void stock_integration() {
     GLOBAL_DICT["total_time"] = seconds_to_hours(total_execution_time);
 }
 
+
+extern bool get_file_pointers();
+extern bool get_header(FILE *a, const char *file_name);
+extern void insert_stock_count(FILE *a);
+extern void log_update();
+extern double seconds_to_hours(double seconds);
+
+struct Global {
+    bool NO_DATABASE;
+    bool LEDGER;
+    bool SALES;
+    char WORKING_DIR[256];
+    FILE *FILE_POINTERS;
+    double GLOBAL_DICT[1]; // Assuming a dictionary-like structure
+} gl;
+
+bool stock_to_database(const char *file_name) {
+    /*
+     esta é a rotina principal , daqui é tudo integrado na base de dados
+    */
+    
+    double total_execution_time = 0;
+    clock_t start_time = clock();
+    bool flag;
+    FILE *a;
+
+    flag = get_file_pointers(&a);
+    gl.FILE_POINTERS = a;
+
+    if (get_header(a, file_name)) {  // não deu erro no header
+        printf("Ficheiro de Inventário\n");
+        printf("%14s: %6s\n", "WORKING_DIR:", gl.WORKING_DIR);
+        insert_stock_count(a);
+    } else {
+        return false;
+    }
+
+    clock_t end_time = clock();
+    total_execution_time += (double)(end_time - start_time) / CLOCKS_PER_SEC;
+    printf("%14s: %10s\n", "TIME:", seconds_to_hours(total_execution_time));
+    gl.GLOBAL_DICT[0] = seconds_to_hours(total_execution_time);
+    log_update(gl.GLOBAL_DICT);
+    return true;
+}
+
+
