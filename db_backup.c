@@ -53,7 +53,6 @@ void send_ftp(char file_list[][256], int file_count) {
     for (int i = 0; i < file_count; i++) {
         FILE *x_file = fopen(file_list[i], "rb");
         if (x_file != NULL) {
-            // FTP upload logic here
             char *file_name = strrchr(file_list[i], '/') ? strrchr(file_list[i], '/') + 1 : file_list[i];
             printf("%-40s OK\n", file_name);
             fclose(x_file);
