@@ -11,11 +11,9 @@ create table programas
     date            date         not null
 );
 
-alter table programas
-    owner to root;
+alter table programas owner to root;
 
-create unique index programas_certificate_num_uindex
-    on programas (certificate_num);
+create unique index programas_certificate_num_uindex on programas (certificate_num);
 
 INSERT INTO public.programas (name, version, producer, certificate_num, status, date) VALUES ('1RPFacturação', '2011.70', 'QUIDGEST CONSULTORES DE GESTAO SA', 1330, 'Certificado', '2011-09-16');
 INSERT INTO public.programas (name, version, producer, certificate_num, status, date) VALUES ('2SPGESADM', '2011', '2 S P INFORMATICA E EQUIPAMENTO ESCRITORIO LDA', 288, 'Certificado', '2010-11-15');
