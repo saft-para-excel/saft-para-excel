@@ -1,0 +1,75 @@
+ body {
+  background-color: #ffffff;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+  color: #424242;
+  margin-left: 10px;
+}
+
+.z {
+
+}
+a {
+    color: #366bcc;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+
+}
+pre {
+    font-size: small;
+}
+i {
+    color: #1823c7;
+}
+[class*="lab-"] {
+    color: #070707;
+    background: rgba(151, 177, 236, 0.97);
+    font-family: "PT sans", sans-serif;
+    font-size: 1rem;
+    display: inline-block;
+    width: 5rem;
+    height: 20px;
+    padding-left: 5px;
+    /*margin-left: -5px;*/
+    margin-bottom: 5px;
+    /*padding-bottom: 5px;*/
+}
+.lab-left {
+    text-align: left;
+    width: 5rem;
+    background: #ffffff;
+
+}
+.lab-right {
+    text-align: right;
+    width: 8rem;
+}
+.lab-data-left {
+    text-align: left;
+    width: 23rem;
+    background: #FAFAFA;
+    border: 1px solid #CCC;
+}
+.lab-data-right {
+    text-align: right;
+    width: 5rem;
+    background: #FAFAFA;
+    border: 1px solid #CCC;
+}
+.line {
+  width: 25%;
+  height: 0;
+  border-bottom: 1px dotted #C4C4C4;
+  margin: 3px;
+  display:inline-block;
+}
+ .line-gray {
+  width: 15%;
+  height: 0;
+  border-bottom: 3px solid #C4C4C4;
+  margin: 3px;
+  display:inline-block;
+}
+    </style>
