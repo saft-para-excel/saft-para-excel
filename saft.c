@@ -132,7 +132,7 @@ void sales_documents_integration() {
     clock_t end_time = clock();
     total_execution_time += (double)(end_time - start_time) / CLOCKS_PER_SEC;
     printf("%14s\n", format_seconds_to_hours(total_execution_time));
-    printf("%s\n", "----------------------------------------");
+    printf("%s\n", "---------TERMINAO------------");
     GLOBAL_DICT["total_time"] = seconds_to_hours(total_execution_time);
     log_update(GLOBAL_DICT);
 }
