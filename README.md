@@ -63,5 +63,18 @@ As colunas são as seguintes:
 <li>Tipo de Artigo</li>
 </ul>
 
+<h1>Página para consulta dos programs certificados pela Autoridade Tributária</h1>
+Inicio da pagina construção da página.
 
-
+Caracteristicas:
+<ul>
+<li>Pesquisa incremental da base de dados por:</li>
+	<ul><li>Numero do Certificado</li>
+	<li>Nome do programa</li>
+	<li>Data da Certificação</li>
+	<li>Estado da Licença</li>
+	<li>Software House</li></ul>
+<li>Desenvolvimentos do Frontend em JS, CSS e HTML</li>
+<li>Desenvolvimento do Backend em LAMP ou LAPP</li>
+	<li>O Frontend corre no WordPress</li>
+</ul>
