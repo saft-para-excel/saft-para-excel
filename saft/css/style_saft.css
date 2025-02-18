@@ -1,0 +1,24 @@
+body {
+   background-color: #ffffff;
+    font-family: "PT sans", serif;
+    font-size: 17px;
+}
+
+
+table{
+
+}
+th, td {
+  border: 1px solid black;
+    padding: 8px;
+}
+thead th {
+  width: 25%;
+}
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eee;
+}
