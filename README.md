@@ -13,8 +13,6 @@
 
 <h2>O site saftparaexcel.com SAF-t vendas para Excel pode ser acedido<a href="https://saftparaexcel.com/"> aqui</h2>
 <h2>O site saftparaexcel.com SAF-t vendas para Excel pode ser acedido<a href="https://saftparaexcel.pt/"> aqui</a></h2>
-<h2>O site saftcontabilidade.com SAF-t de contabilidade para Excel pode ser acedido<a href="https://saftcontabilidade.com/"> aqui</a></h2>
-<h2>O site saftcontabilidade.pt SAF-t de contabilidade para Excel pode ser acedido<a href="https://saftcontabilidade.pt/"> aqui</a></h2>
 <ul>
 <li>Introduzir um e-mail</li>
 <li>Premir o botão “Browse” para indicar nome de um ficheiro <a href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/SAFT_PT/Paginas/news-saf-t-pt.aspx" target="_blank" rel="noopener">SAF-t</a></li>
